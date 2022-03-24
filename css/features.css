@@ -52,16 +52,29 @@ li.seven-boom {
   width: 70px;
 }
 
-li.seven-boom:hover{
+li.seven-boom:hover {
   font-size: 35px;
 }
 
-li.manual-mines{
+li.manual-mines {
   font-size: 30px;
+  width: 56px;
+  padding: 8px;
+  text-align: left;
+  margin-right: 0;
+  border-radius: 15px;
 }
 
 li.manual-mines:hover {
   font-size: 40px;
+}
+
+li.manual-mines.selected {
+  text-shadow: none;
+  background-color: #9d306d66;
+}
+li.manual-mines.selected:hover {
+  background-color: inherit;
 }
 
 .config .lives,

@@ -6,10 +6,10 @@ function setManualMineMode(elLi) {
   buildBoard()
   renderBoard(gBoard)
 
+  elLi.classList.toggle('selected')
+
   if (gGame.isManualMine) {
     resetGameProperties()
-    elLi.style.border = '3px solid black'
-    elLi.style.fontSize = '200%'
     revealBoard()
 
     document
