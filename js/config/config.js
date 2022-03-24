@@ -41,7 +41,9 @@ function renderUlWithIcons(targetEl, icon, numOfLi, onClickFunc = '') {
 
 function renderMinesLeft() {
   const minesLeft =
-    gGame.currDifficulty.MINES - gGame.flagsCount - gGame.minesShownCount
+    (gGame.is7Boom ? gGame.mines7Boom : gGame.currDifficulty.MINES) -
+    gGame.flagsCount -
+    gGame.minesShownCount
 
   gElMinesLeft.innerText = minesLeft
 }

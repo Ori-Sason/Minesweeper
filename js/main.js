@@ -41,6 +41,7 @@ const gGame = {
   isHintMode: false,
   safeClicksCount: 0,
   is7Boom: false,
+  mines7Boom: 0,
   isManualMine: false,
   isManualGame: false,
 

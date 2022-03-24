@@ -8,8 +8,10 @@ function checkGameOver() {
     renderSmiley(SMILIES.lose)
     changeBgImg(BG_IMAGE_LOSE)
   } else if (
-    gGame.flagsCount + gGame.minesShownCount === gGame.currDifficulty.MINES &&
-    gGame.shownCount + gGame.flagsCount === gGame.currDifficulty.SIZE ** 2
+    gGame.shownCount + gGame.flagsCount === gGame.currDifficulty.SIZE ** 2 &&
+    (gGame.flagsCount + gGame.minesShownCount === gGame.currDifficulty.MINES ||
+      (gGame.is7Boom &&
+        gGame.flagsCount + gGame.minesShownCount === gGame.mines7Boom))
   ) {
     isGameOver = true
     renderSmiley(SMILIES.win)
@@ -36,14 +38,18 @@ function showAllMines() {
 }
 
 function changeBgImg(toImgSrc) {
- gElBgImg.style.opacity = 0
+  gElBgImg.style.opacity = 0
 
-  setTimeout((toImgSrc) => {
-   gElBgImg.style.backgroundImage = toImgSrc
-   gElBgImg.style.opacity = 1
-  }, 200, toImgSrc)
+  setTimeout(
+    (toImgSrc) => {
+      gElBgImg.style.backgroundImage = toImgSrc
+      gElBgImg.style.opacity = 1
+    },
+    200,
+    toImgSrc
+  )
 }
 
-function checkPlayImg(){
+function checkPlayImg() {
   return gElBgImg.style.backgroundImage === BG_IMAGE_PLAY
 }

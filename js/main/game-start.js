@@ -14,7 +14,7 @@ function initGame(firstPos) {
   gElTimer.innerText = '00:00'
 
   if (gGame.is7Boom) {
-    setMines7Boom(gBoard)
+    gGame.mines7Boom = setMines7Boom(gBoard)
   } else if (firstPos && !gGame.isManualGame) {
     if (gGame.is7Boom) gGame.is7Boom = false
     else {
