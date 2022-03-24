@@ -31,3 +31,9 @@ function recoverFromUndo(elBtn) {
   }
   renderBoard(gBoard)
 }
+
+function ctrlZ(event){
+  if(event.keyCode == 90 && event.ctrlKey){
+    recoverFromUndo()
+  }  
+}

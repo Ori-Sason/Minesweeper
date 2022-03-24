@@ -1,7 +1,7 @@
 'use strict'
 
 function showSafeClick(elTd) {
-  if (checkIsFirstMove()) {
+  if (checkIsFirstMove() || !gGame.isOn) {
     elTd.style.textDecoration = 'line-through'
     elTd.style.textDecorationColor = 'red'
     setTimeout((elTd) => (elTd.style.textDecoration = 'none'), 300, elTd)
