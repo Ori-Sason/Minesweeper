@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ultra&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/config.css" />
+    <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <title>Minesweeper</title>
+  </head>
+  <body onload="initGame()">
+    <div class="bg-image"></div>
+    <div class="game-container">
+      <h1>Minesweeper</h1>
+
+      <div class="difficulties">
+        <ul>
+          <li onclick="changeDifficutly(this)">Easy</li>
+          <li class="curr-difficulty" onclick="changeDifficutly(this)">
+            Medium
+          </li>
+          <li onclick="changeDifficutly(this)">Expert</li>
+        </ul>
+      </div>
+      <div class="config">
+        <ul>
+          <li class="safe-click icon">🔐</li>
+          <li class="undo icon" onclick="recoverFromUndo(this)">&#8634;</li>
+          <li class="seven-boom icon" onclick="set7BoomMode()">7💥</li>
+          <li class="manual-mines icon" onclick="setManualMineMode(this)">
+            💪
+          </li>
+        </ul>
+        <ul>
+          <li class="lives icon"></li>
+          <li class="hints">💡</li>
+          <li class="best-time">Best Time: <span></span></li>
+        </ul>
+        <ul>
+          <li class="mines-left">Mines Left: <span></span></li>
+          <li class="restart-btn icon" onclick="initGame()"></li>
+          <li class="timer">Timer: <span>00:00</span></li>
+        </ul>
+      </div>
+
+      <table class="board-table">
+        <tbody class="board-tbody">
+          <!-- Game board is rendered here -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Created by <span>Ori Sason</span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/config/config.js"></script>
+    <script src="js/config/times.js"></script>
+    <script src="js/features/hints.js"></script>
+    <script src="js/features/manual-mines.js"></script>
+    <script src="js/features/safe-click.js"></script>
+    <script src="js/features/seven-boom.js"></script>
+    <script src="js/features/undo.js"></script>
+    <script src="js/main/game-start.js"></script>
+    <script src="js/main/render-board.js"></script>
+    <script src="js/main/cell-events.js"></script>
+    <script src="js/main/game-over.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/dev-debug/debug.js"></script>
+  </body>
+</html>

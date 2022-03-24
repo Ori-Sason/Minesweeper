@@ -1,0 +1,101 @@
+html {
+  height: 100%;
+}
+
+body {
+  --purple-color-100: #dec9e9;
+  --purple-color-200: #dac3e8;
+  --purple-color-300: #d2b7e5;
+  --purple-color-400: #c19ee0;
+  --purple-color-500: #9163cb;
+  --purple-color-700: #8345cf;
+  --purple-color-900: #6247aa;
+
+  --white-color-100: rgb(235, 229, 229);
+
+  --text-shadow-color: #27084d9b;
+
+  --icons-font-size: 36px;
+  --table-cells-font-size: 17px;
+  --border-radius-corners: 10px;
+  --black-bg-color: rgb(17, 17, 17);
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Ultra', sans-serif;
+  background-color: var(--black-bg-color);
+  
+}
+
+.bg-image{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-image: url('/img/background-play.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: opacity 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.game-container {
+  position: absolute;
+  width: 850px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--white-color-100);
+  font-size: 46px;
+  text-shadow: -1px -1px 5px var(--text-shadow-color),
+    1px -1px 5px var(--text-shadow-color), -1px 1px 5px var(--text-shadow-color),
+    1px 1px 5px var(--text-shadow-color);
+}
+
+.difficulties,
+.best-time,
+.mines-left,
+.timer {
+  text-shadow: -1px -1px 3px var(--text-shadow-color),
+    1px -1px 3px var(--text-shadow-color), -1px 1px 3px var(--text-shadow-color),
+    1px 1px 3px var(--text-shadow-color);
+}
+
+.config li.mines-left,
+.config li.timer{
+  padding: 0;
+  width: 230px;
+  text-align: left;
+}
+
+.config li.timer{
+  width: 210px;
+}
+
+footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-left: 35px;
+  font-family: sans-serif;
+  text-align: left;
+  font-size: 18px;
+  color: var(--white-color-100);
+  background-color: var(--black-bg-color);
+}
+
+footer span{
+  font-family: 'Ultra', sans-serif;
+  padding-left: 5px;
+  font-size: 22px;
+  text-shadow: none;
+  font-weight: none;
+}

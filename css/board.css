@@ -1,0 +1,60 @@
+.board-table {  
+    margin: auto;
+    margin-top: 10px;
+    overflow: hidden;
+    table-layout: fixed; /* font size doesn't change td size*/
+    outline: 2px solid #6247aa33;
+    box-shadow: 1px 1px 20px 0.1px var(--purple-color-900);
+    background-color: var(--purple-color-400);
+    border-radius: var(--border-radius-corners);
+  }
+
+  tr:first-of-type td:first-of-type {
+    border-radius: var(--border-radius-corners) 0 0 0;
+  }
+  tr:first-of-type td:last-of-type {
+    border-radius: 0 var(--border-radius-corners) 0 0;
+  }
+  
+  tr:last-of-type td:first-of-type {
+    border-radius: 0 0 0 var(--border-radius-corners);
+  }
+  tr:last-of-type td:last-of-type {
+    border-radius: 0 0 var(--border-radius-corners) 0;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    overflow: hidden; /* font size doesn't change td size*/
+    text-align: center;
+    font-size: var(--table-cells-font-size);
+    border-top: 3px solid var(--purple-color-100);
+    border-left: 3px solid var(--purple-color-100);
+    border-bottom: 3px solid var(--purple-color-900);
+    border-right: 3px solid var(--purple-color-900);
+    background-color: var(--purple-color-500);
+    cursor: pointer;
+  }
+  
+  .cell:not(.visible):hover {
+    background-color: var(--purple-color-400);
+  }
+  
+  .visible {
+    border: 3px solid transparent;
+    background-color: var(--purple-color-300);
+    cursor: default;
+  }
+  
+  .icon {
+    font-size: calc(var(--table-cells-font-size) * 0.8);
+  }
+  
+  .mine-dead {
+    background-color: #e58aab91;
+  }
+  
+  .mine-alive {
+    background-color: #ffffb6d4;
+  }

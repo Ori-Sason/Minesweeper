@@ -1,0 +1,93 @@
+.config {
+  width: 750px;
+  margin: auto;
+}
+
+.config ul {
+  height: 55px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.config > ul:last-of-type {
+  margin: 32px auto;
+}
+
+.config li {
+  color: var(--white-color-100);
+  font-size: 25px;
+  padding: 10px;
+}
+
+li.icon {
+  width: 35px;
+  padding: 0;
+  font-size: 28px;
+  margin-right: 10px;
+  text-align: left;
+  text-shadow: -1px -1px 3px var(--text-shadow-color),
+    1px -1px 3px var(--text-shadow-color), -1px 1px 3px var(--text-shadow-color),
+    1px 1px 3px var(--text-shadow-color);
+  cursor: pointer;
+}
+
+.config .safe-click li:hover {
+  font-size: 140%;
+}
+
+li.undo {
+  font-size: 42px;
+}
+
+li.undo:hover {
+  font-size: 60px;
+}
+
+li.seven-boom {
+  width: 70px;
+}
+
+li.seven-boom:hover{
+  font-size: 35px;
+}
+
+li.manual-mines{
+  font-size: 30px;
+}
+
+li.manual-mines:hover {
+  font-size: 40px;
+}
+
+.config .lives,
+.config .hints {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.config .lives {
+  width: 127px;
+  font-size: 36px;
+  color: red;
+  cursor: default;
+}
+
+.config .hints li {
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.config .hints li:hover {
+  font-size: 120%;
+}
+
+.hint-mode {
+  border: 3px solid transparent;
+  background-color: var(--purple-color-300);
+  cursor: default;
+}
