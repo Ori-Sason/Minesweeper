@@ -26,9 +26,7 @@ function copyMat(mat) {
   return newMat
 }
 
-let gNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-function drawNum() {
-  //NOTICE: WE NEED GLOBAL NUMBERS ARRAY - gNumbers
+function drawNum(numArray) {
   const idx = getRanndomIntInclusive(0, numbers.length - 1)
   return numbers.splice(idx, 1)[0]
 }
@@ -59,10 +57,8 @@ function pad(val) {
 
 
 function timer(startTime) {
-  //NOTICE: WE NEED GLOBAL START TIME - gStartTime
   var timeDiff = Date.now() - startTime
   //   var currTime = new Date(timeDiff)
-
   //   return currTime //shows in milliseconds
 
   //OR

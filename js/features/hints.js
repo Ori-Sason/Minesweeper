@@ -5,7 +5,7 @@ function updateHints(num) {
 }
 
 function setHintMode(elBtn) {
-  //if the game is not started, reject using hint (we dind't build the board yet)
+  //if the game is not started, reject using hint (we didn't build the board yet)
   if (checkIsFirstMove() || !gGame.isOn) {
     elBtn.style.color = 'transparent'
     elBtn.style.textShadow = '0 0 0 red'

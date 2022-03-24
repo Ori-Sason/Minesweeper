@@ -5,7 +5,7 @@ function checkGameOver() {
   if (gGame.livesCount === 0) {
     isGameOver = true
     showAllMines()
-    renderSmiley(SMILIES.lose)
+    renderSmiley(SMILEYS.lose)
     changeBgImg(BG_IMAGE_LOSE)
   } else if (
     gGame.shownCount + gGame.flagsCount === gGame.currDifficulty.SIZE ** 2 &&
@@ -14,7 +14,7 @@ function checkGameOver() {
         gGame.flagsCount + gGame.minesShownCount === gGame.mines7Boom))
   ) {
     isGameOver = true
-    renderSmiley(SMILIES.win)
+    renderSmiley(SMILEYS.win)
     changeBgImg(BG_IMAGE_WIN)
     updateBestTime()
   }

@@ -3,7 +3,7 @@
 const MINE = '💣'
 const FLAG = '🚩'
 const LIFE = '&#10084;'
-const SMILIES = { playing: '🤔', win: '😁', lose: '😅' }
+const SMILEYS = { playing: '🤔', win: '😁', lose: '😅' }
 const HINT = '💡'
 const LOCAL_STORAGE_KEY = 'minesweeperTime'
 const SAFE_CLICK = '🔐' //

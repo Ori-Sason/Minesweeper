@@ -1,6 +1,6 @@
 'use strict'
 
-function changeDifficutly(elDiff) {
+function changeDifficulty(elDiff) {
   gGame.currDifficulty = gDifficulties[elDiff.innerText.toLowerCase()]
 
   renderBestTime()
