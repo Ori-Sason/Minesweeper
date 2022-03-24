@@ -7,9 +7,9 @@ const SMILIES = { playing: '🤔', win: '😁', lose: '😅' }
 const HINT = '💡'
 const LOCAL_STORAGE_KEY = 'minesweeperTime'
 const SAFE_CLICK = '🔐' //
-const BG_IMAGE_PLAY = 'url("/img/background-play.png")'
-const BG_IMAGE_WIN = 'url("/img/background-win.png")'
-const BG_IMAGE_LOSE = 'url("/img/background-lose.png")'
+const BG_IMAGE_PLAY = 'url("img/background-play.png")'
+const BG_IMAGE_WIN = 'url("img/background-win.png")'
+const BG_IMAGE_LOSE = 'url("img/background-lose.png")'
 
 const DIGIT_COLORS = [
   'transparent',
