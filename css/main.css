@@ -96,6 +96,7 @@ footer span {
 @media only screen and (max-width: 768px) {
   .bg-image {
     position: fixed;
+    background-image: url('../img/background-play-768.png');
   }
 
   .game-flex-container {
