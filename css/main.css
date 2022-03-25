@@ -123,14 +123,12 @@ footer span {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid red;
   }
   
   li.safe-click.icon {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border: 1px solid blue;
   }
   
   li.undo.icon,
@@ -138,7 +136,6 @@ footer span {
   li.manual-mines.icon {
     flex: 1;
     text-align: center;
-    border: 1px solid green;
   }
 
   .config > ul:not(:nth-of-type(1)) {
