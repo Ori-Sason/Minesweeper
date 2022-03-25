@@ -1,6 +1,5 @@
 .board-table {  
-    margin: auto;
-    margin-top: 0.7rem  ;
+    margin: 1rem auto 3rem auto;
     overflow: hidden;
     table-layout: fixed; /* font size doesn't change td size*/
     outline: 0.125 solid #6247aa33;

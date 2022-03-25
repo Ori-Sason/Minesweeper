@@ -47,19 +47,20 @@ body {
 
 .game-container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   text-align: center;
 }
 
 .game-flex-container {
-  height: 95%;
+  min-height: fit-content;
   width: 46rem;
   padding: 0 2.5rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 h1 {
@@ -74,8 +75,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 5%;
   width: 100%;
+  margin-top: auto;
   padding-left: 2rem;
   font-family: sans-serif;
   text-align: left;
