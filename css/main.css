@@ -55,7 +55,6 @@ body {
 .game-flex-container {
   height: 95%;
   width: 46rem;
-  /* margin: 0 2.5rem; */
   padding: 0 2.5rem;
 
   display: flex;
@@ -150,7 +149,7 @@ footer span {
   }
 
   .board-table {
-    width: 100%;
+    max-width: 100%;
   }
 
   footer {
