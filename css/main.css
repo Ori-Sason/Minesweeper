@@ -33,7 +33,7 @@ body {
 .bg-image {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   min-height: 100%;
   min-width: 100%;
@@ -99,8 +99,7 @@ footer span {
   }
 
   .game-flex-container {
-    height: auto;
-    min-height: 100%;
+    padding:0;
     width: 100%;
   }
 
@@ -150,11 +149,16 @@ footer span {
   }
 
   .board-table {
-    max-width: 100%;
+    width: 0;
+  }
+  
+  td.cell{
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 75%;
   }
 
   footer {
-    margin-top: 2rem;
     position: static;
   }
 }
