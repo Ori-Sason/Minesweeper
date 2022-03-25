@@ -1,0 +1,85 @@
+
+li.icon {
+  width: 2.2rem;
+  padding: 0;
+  font-size: 1.75rem;
+  margin-right: 0.625rem;
+  text-align: left;
+  text-shadow: -1px -1px 3px var(--text-shadow-color),
+    1px -1px 3px var(--text-shadow-color), -1px 1px 3px var(--text-shadow-color),
+    1px 1px 3px var(--text-shadow-color);
+  cursor: pointer;
+}
+
+.config .safe-click li:hover {
+  font-size: 140%;
+}
+
+li.undo {
+  font-size: 2.6rem;
+}
+
+li.undo:hover {
+  font-size: 3.75rem;
+}
+
+li.seven-boom {
+  width: 5.6rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin-right: 0;
+  border-radius: 15px;
+}
+
+li.seven-boom:hover {
+  font-size: 2.2rem;
+}
+
+li.manual-mines {
+  font-size: 1.9rem;
+  width: 3.5rem;
+  padding: 0.5rem;
+  text-align: left;
+  margin-right: 0;
+  border-radius: 15px;
+}
+
+li.manual-mines:hover {
+  font-size: 2.5rem;
+}
+
+li.seven-boom.selected,
+li.manual-mines.selected {
+  text-shadow: none;
+  background-color: #9d306d66;
+}
+
+li.manual-mines.selected:hover {
+  background-color: inherit;
+}
+
+.config .lives,
+.config .hints {
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+
+.config .lives {
+  width: 8rem;
+  color: red;
+  cursor: default;
+}
+
+.config .hints li {
+  cursor: pointer;
+}
+
+.config .hints li:hover {
+  font-size: 120%;
+}
+
+.hint-mode {
+  border: 0.2rem solid transparent;
+  background-color: var(--purple-color-300);
+  cursor: default;
+}

@@ -1,10 +1,10 @@
 .board-table {  
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.7rem  ;
     overflow: hidden;
     table-layout: fixed; /* font size doesn't change td size*/
-    outline: 2px solid #6247aa33;
-    box-shadow: 1px 1px 20px 0.1px var(--purple-color-900);
+    outline: 0.125 solid #6247aa33;
+    box-shadow: 0.0625rem 0.0625rem 1.25rem 0.1px var(--purple-color-900);
     background-color: var(--purple-color-400);
     border-radius: var(--border-radius-corners);
   }
@@ -24,15 +24,15 @@
   }
   
   .cell {
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     overflow: hidden; /* font size doesn't change td size*/
     text-align: center;
     font-size: var(--table-cells-font-size);
-    border-top: 3px solid var(--purple-color-100);
-    border-left: 3px solid var(--purple-color-100);
-    border-bottom: 3px solid var(--purple-color-900);
-    border-right: 3px solid var(--purple-color-900);
+    border-top: 0.1875rem solid var(--purple-color-100);
+    border-left: 0.1875rem solid var(--purple-color-100);
+    border-bottom: 0.1875rem solid var(--purple-color-900);
+    border-right: 0.1875rem solid var(--purple-color-900);
     background-color: var(--purple-color-500);
     cursor: pointer;
   }
@@ -42,7 +42,7 @@
   }
   
   .visible {
-    border: 3px solid transparent;
+    border: 0.1875rem solid transparent;
     background-color: var(--purple-color-300);
     cursor: default;
   }

@@ -1,6 +1,11 @@
 .difficulties {
-  width: 420px;
-  margin: auto;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.difficulties li,
+.config li{
+  font-size: 1.4rem;
 }
 
 .difficulties ul {
@@ -8,12 +13,11 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
-  list-style: none;
+  list-style-type: none;
 }
 
 .difficulties li {
-  margin: 20px;
-  padding: 10px 15px;
+  padding: 0.65rem 1rem;
   color: var(--white-color-100);
   cursor: pointer;
 }
@@ -24,11 +28,59 @@
   background-color: #9d306d66;
 }
 
+.difficulties,
+.best-time,
+.mines-left,
+.timer {
+  text-shadow: -1px -1px 3px var(--text-shadow-color),
+    1px -1px 3px var(--text-shadow-color), -1px 1px 3px var(--text-shadow-color),
+    1px 1px 3px var(--text-shadow-color);
+}
+
+.config {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.config ul {
+  height: 3rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.config > ul:last-of-type {
+  margin: 2rem auto 0 auto;
+}
+
+.config li {
+  color: var(--white-color-100);
+  padding: 10px;
+}
+
+.config li.mines-left,
+.config li.best-time,
+.config li.timer{
+  padding: 0;
+  text-align: left;
+}
+
+.config li.mines-left{
+  width: 13rem;
+}
+
+.config li.timer{
+  width: 11.3rem;
+}
+
 .config .restart-btn {
-  font-size: 48px;
+  width: 3.5rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 
 .config .restart-btn:hover{
-  font-size: 57px;
+  font-size: 3.5rem;
 }

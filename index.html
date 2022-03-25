@@ -12,55 +12,58 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/config.css" />
-    <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/board.css" />
     <title>Minesweeper</title>
   </head>
   <body onload="initGame()" onkeyup="ctrlZ(event)">
     <div class="bg-image"></div>
+
     <div class="game-container">
-      <h1>Minesweeper</h1>
+      <div class="game-flex-container">
+        <h1>Minesweeper</h1>
 
-      <div class="difficulties">
-        <ul>
-          <li onclick="changeDifficulty(this)">Easy</li>
-          <li class="curr-difficulty" onclick="changeDifficutly(this)">
-            Medium
-          </li>
-          <li onclick="changeDifficutly(this)">Expert</li>
-        </ul>
-      </div>
-      <div class="config">
-        <ul>
-          <li class="safe-click icon">🔐</li>
-          <li class="undo icon" onclick="recoverFromUndo(this)">&#8634;</li>
-          <li class="seven-boom icon" onclick="set7BoomMode(this)">7💥</li>
-          <li class="manual-mines icon" onclick="setManualMineMode(this)">
-            💪
-          </li>
-        </ul>
-        <ul>
-          <li class="lives icon"></li>
-          <li class="hints">💡</li>
-          <li class="best-time">Best Time: <span></span></li>
-        </ul>
-        <ul>
-          <li class="mines-left">Mines Left: <span></span></li>
-          <li class="restart-btn icon" onclick="initGame()"></li>
-          <li class="timer">Timer: <span>00:00</span></li>
-        </ul>
+        <div class="difficulties">
+          <ul>
+            <li onclick="changeDifficulty(this)">Easy</li>
+            <li class="curr-difficulty" onclick="changeDifficulty(this)">
+              Medium
+            </li>
+            <li onclick="changeDifficulty(this)">Expert</li>
+          </ul>
+        </div>
+        <div class="config">
+          <ul>
+            <li class="safe-click icon">🔐</li>
+            <li class="undo icon" onclick="recoverFromUndo(this)">&#8634;</li>
+            <li class="seven-boom icon" onclick="set7BoomMode(this)">7💥</li>
+            <li class="manual-mines icon" onclick="setManualMineMode(this)">
+              💪
+            </li>
+          </ul>
+          <ul>
+            <li class="lives icon"></li>
+            <li class="hints">💡</li>
+            <li class="best-time">Best Time: <span></span></li>
+          </ul>
+          <ul>
+            <li class="mines-left">Mines Left: <span></span></li>
+            <li class="restart-btn icon" onclick="initGame()"></li>
+            <li class="timer">Timer: <span>00:00</span></li>
+          </ul>
+        </div>
+
+        <table class="board-table">
+          <tbody class="board-tbody">
+            <!-- Game board is rendered here -->
+          </tbody>
+        </table>
       </div>
 
-      <table class="board-table">
-        <tbody class="board-tbody">
-          <!-- Game board is rendered here -->
-        </tbody>
-      </table>
+      <footer>
+        <p>Created by <span>Ori Sason</span></p>
+      </footer>
     </div>
-
-    <footer>
-      <p>Created by <span>Ori Sason</span></p>
-    </footer>
 
     <script src="js/main.js"></script>
     <script src="js/config/config.js"></script>

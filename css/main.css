@@ -16,8 +16,8 @@ body {
 
   --text-shadow-color: #27084d9b;
 
-  --icons-font-size: 36px;
-  --table-cells-font-size: 16px;
+  --icons-font-size: 2.25rem;
+  --table-cells-font-size: 100%;
   --border-radius-corners: 10px;
   --black-bg-color: rgb(17, 17, 17);
 
@@ -27,11 +27,15 @@ body {
   background-color: var(--black-bg-color);
   
 }
+* {
+  box-sizing: border-box;
+}
+
 
 .bg-image{
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top:0;
   min-height: 100%;
   min-width: 100%;
@@ -43,53 +47,42 @@ body {
   transition: opacity 0.3s;
 }
 
-* {
-  box-sizing: border-box;
+.game-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-.game-container {
-  position: fixed;
-  width: 850px;
-  margin-bottom: 30px;
-  text-align: center;
+.game-flex-container{
+  height: 95%;
+  width: 46rem;
+  /* margin: 0 2.5rem; */
+  padding: 0 2.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
   color: var(--white-color-100);
-  font-size: 46px;
+  font-size: 2.9rem;
   text-shadow: -1px -1px 5px var(--text-shadow-color),
     1px -1px 5px var(--text-shadow-color), -1px 1px 5px var(--text-shadow-color),
     1px 1px 5px var(--text-shadow-color);
 }
 
-.difficulties,
-.best-time,
-.mines-left,
-.timer {
-  text-shadow: -1px -1px 3px var(--text-shadow-color),
-    1px -1px 3px var(--text-shadow-color), -1px 1px 3px var(--text-shadow-color),
-    1px 1px 3px var(--text-shadow-color);
-}
-
-.config li.mines-left,
-.config li.timer{
-  padding: 0;
-  width: 230px;
-  text-align: left;
-}
-
-.config li.timer{
-  width: 210px;
-}
-
 footer{
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5%;
   width: 100%;
-  bottom: 0;
-  padding-left: 35px;
+  padding-left: 2rem;
   font-family: sans-serif;
   text-align: left;
-  font-size: 18px;
+  font-size: 1rem;
   color: var(--white-color-100);
   background-color: var(--black-bg-color);
 }
@@ -97,7 +90,20 @@ footer{
 footer span{
   font-family: 'Ultra', sans-serif;
   padding-left: 5px;
-  font-size: 22px;
+  font-size: 1.2rem;
   text-shadow: none;
   font-weight: none;
+}
+
+@media only screen and (max-width: 850px) {
+  
+  .game-flex-container{
+    width: 100%;
+  }
+
+  .difficulties ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
