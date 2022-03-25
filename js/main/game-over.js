@@ -21,7 +21,7 @@ function checkGameOver() {
 
   if (isGameOver) {
     gGame.isOn = false
-    gGame.isManualGame = false
+    clearManualMode()
     clearInterval(gGame.timeIntervalId)
   }
 

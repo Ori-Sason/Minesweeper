@@ -1,6 +1,8 @@
 'use strict'
 
 function set7BoomMode(elBtn) {
+  clearManualMode()
+
   gGame.is7Boom = !gGame.is7Boom
   elBtn.classList.toggle('selected')
   initGame()
@@ -20,4 +22,10 @@ function setMines7Boom(board) {
     }
   }
   return mineCounter
+}
+
+function clear7BoomMode(){
+  gGame.is7Boom = false
+  gGame.mines7Boom = 0
+  gEl7Boom.classList.remove('selected')
 }

@@ -1,6 +1,8 @@
 'use strict'
 
 function setManualMineMode(elLi) {
+  clear7BoomMode()
+  
   gGame.isManualMine = !gGame.isManualMine
   resetGameProperties()
   buildBoard()
@@ -9,14 +11,13 @@ function setManualMineMode(elLi) {
   elLi.classList.toggle('selected')
 
   if (gGame.isManualMine) {
-    resetGameProperties()
     revealBoard()
 
     document
       .querySelectorAll('.cell')
       .forEach((cell) => (cell.style.cursor = 'pointer'))
   } else {
-    clearManualModeUI()
+    clearManualMode()
     initGame()
   }
 }
@@ -51,15 +52,14 @@ function startManualMineGame() {
     }
   }
 
-  clearManualModeUI()
-
   gGame.isManualMine = false
   gGame.isManualGame = true
   gGame.timeIntervalId = setInterval(renderTimer, 1000)
   initGame()
 }
 
-function clearManualModeUI() {
-  gElManualMines.style.border = ''
-  gElManualMines.style.color = ''
+function clearManualMode(){
+  gGame.isManualMine = false
+  gGame.isManualGame = false
+  gElManualMines.classList.remove('selected')
 }

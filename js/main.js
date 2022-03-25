@@ -60,6 +60,7 @@ var visibilityStates = [] //for the hint feature
 
 const gElBgImg = document.querySelector('.bg-image')
 const gElSafeClicks = document.querySelector('.safe-click')
+const gEl7Boom = document.querySelector('.seven-boom')
 const gElManualMines = document.querySelector('.manual-mines')
 const gElLives = document.querySelector('.lives')
 const gElHints = document.querySelector('.hints')
