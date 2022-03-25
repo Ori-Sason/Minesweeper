@@ -11,6 +11,10 @@ li.icon {
   cursor: pointer;
 }
 
+.config .safe-click{
+  width: 6.8rem;
+}
+
 .config .safe-click li:hover {
   font-size: 140%;
 }
