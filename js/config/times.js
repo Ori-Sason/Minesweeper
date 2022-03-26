@@ -6,14 +6,20 @@ function renderTimer() {
 }
 
 function getBestTime() {
-  var bestTime = localStorage.getItem(
-    LOCAL_STORAGE_KEY + gGame.currDifficulty.SIZE
-  )
+  var bestTime = localStorage.getItem(getBestTimeKeyName())
   return bestTime
 }
 
 function setBestTime(bestTime) {
-  localStorage.setItem(LOCAL_STORAGE_KEY + gGame.currDifficulty.SIZE, bestTime)
+  localStorage.setItem(getBestTimeKeyName(), bestTime)
+}
+
+function getBestTimeKeyName() {
+  var keyName = LOCAL_STORAGE_KEY
+  keyName += gGame.is7Boom ? '7Boom' : ''
+  keyName += gGame.isManualMine || gGame.isManualGame ? 'Manual' : ''
+  keyName += gGame.currDifficulty.SIZE
+  return keyName
 }
 
 function renderBestTime() {

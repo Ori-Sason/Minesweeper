@@ -83,3 +83,7 @@ function cellFlagged(event, elCell, idxI, idxJ) {
   renderMinesLeft()
   checkGameOver()
 }
+
+function tableRightClick(event){
+  event.preventDefault()
+}

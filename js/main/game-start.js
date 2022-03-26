@@ -12,16 +12,16 @@ function initGame(firstPos) {
   }
 
   gElTimer.innerText = '00:00'
-
   if (gGame.is7Boom) {
     gGame.mines7Boom = setMines7Boom(gBoard)
   } else if (firstPos && !gGame.isManualGame) {
     if (gGame.is7Boom) gGame.is7Boom = false
     else {
       setMinesRandomly(gBoard, gGame.currDifficulty.MINES, firstPos)
-      gGame.timeIntervalId = setInterval(renderTimer, 1000)
     }
   }
+
+  if (firstPos) gGame.timeIntervalId = setInterval(renderTimer, 1000)
 
   renderBoard(gBoard)
 }
@@ -29,7 +29,7 @@ function initGame(firstPos) {
 function resetGameProperties() {
   if (firstLoad) gElBgImg.style.backgroundImage = BG_IMAGE_PLAY
   else if (!checkPlayImg()) changeBgImg(BG_IMAGE_PLAY)
-  
+
   clearInterval(gGame.timeIntervalId)
 
   gGame.isOn = true
